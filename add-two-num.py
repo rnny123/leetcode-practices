@@ -24,6 +24,7 @@ def addTwoNumbers(l1, l2):
       while l1:
           value1 = value1 * 10 + l1.val
           l1 = l1.next
+          print(f"the value is:{value1}")
       while l2:
           value2 = value2 * 10 + l2.val
           l2 = l2.next
