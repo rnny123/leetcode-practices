@@ -1,17 +1,24 @@
+
+
 def longestPalindrome(s):
         """
         :type s: str
         :rtype: str
         """
-        reversed_s = reversed(s)
-        for i in range(len(s)):
-                for j in range(len(reversed_s)):
-                        if s[i] == reversed_s[j]:
-                            start = i 
-                        while s[i] == reversed_s[j]:
-                                i +=1
-                                j +=1
-                                value = i
+        #going from the middle of the string s
+        left = len(s) // 2
+        right = left
+        print(f"initial value of right : {right} and left is: {left}")
+        while left >= 0 and right <= len(s) - 1 and s[left] == s[right]:
+            print("entering the loop")
+            left -= 1
+            right += 1
+            
+        print(f"left value is: {left}")
+        print(f"right value is {right}")
+
+longestPalindrome("abaab")
+                
                         
                         
                                 
