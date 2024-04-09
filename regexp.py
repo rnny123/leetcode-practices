@@ -17,12 +17,15 @@ def isMatch(s, p):
                             dp[i][j] = dp[i-1][j-1]
                      elif p[j-1] == '*':
                             if p[j-2] == s[i-1] or p[j-2] == '.':
-                                   dp[i][j] = dp[i-1][j]
+                                   if dp[i-1][j] == True:
+                                          dp[i][j] = dp[i-1][j]
+                                   else:
+                                          dp[i][j] = dp[i][j-2]
                             else:
                                    dp[i][j] = dp[i][j-2]
-       return dp[i][j]
+       return dp[len(s)][len(p)]
 
-value = isMatch("aab","c*a*b")
+value = isMatch("aaaaabaaaaaa","aaa*")
 print(f"value is {value}")
         
             
