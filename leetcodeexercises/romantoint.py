@@ -4,6 +4,11 @@ def romanToInt(s):
     :rtype: int
     """
     value = 0
+    """
+    :type s: str
+    :rtype: int
+    """
+    value = 0
     dict = {'I':1,
             'V':5,
             'X':10,
