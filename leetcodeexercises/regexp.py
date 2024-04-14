@@ -1,3 +1,9 @@
+import re
+s= "aa"
+p = "a"
+yeet = re.search(r'a*',"aaaaa hello a my name is" )
+print(bool(yeet))
+
 def isMatch(s, p):
        """
        :type s: str
@@ -25,8 +31,18 @@ def isMatch(s, p):
                                    dp[i][j] = dp[i][j-2]
        return dp[len(s)][len(p)]
 
-value = isMatch("aaaaabaaaaaa","aaa*")
+def isMatch2(s, p):
+       if re.match(f"^{p}$", s):
+              return True
+       else:
+              return False
+
+s = "ab"
+p = ".*"
+value = isMatch(s,p)
+
 print(f"value is {value}")
+print(f"second value is {isMatch2(s,p)}")
         
             
                 
