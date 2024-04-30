@@ -69,13 +69,17 @@ class Linkedlist:
             #enters this if index is valid and linked list is present
             current_value = self.head
             for i in range(index-1):
+                #enters the for loop until the value before the index you want to remove
                 if not current_value:
+                    #if index input value is out of the range
                     print("sorry brooooo out of range of linkedlist")
                     return
                 current_value = current_value.next
+            #double checks if input index value is out of range
             if not current_value or not current_value.next:
                 print("sorry brooooo out of range of linkedlist")
                 return
+            #links the value before the index to remove to the next value after the index to be remove
             next_value = current_value.next
             current_value.next = next_value.next
 

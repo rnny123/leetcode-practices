@@ -4,13 +4,14 @@ class ListNode(object):
         self.next = next
 
 def reverselist(head):
-    prev, current = None, head
+    prev,current = None,head
     while current:
         next_node = current.next
         current.next = prev
         prev = current
         current = next_node
     return prev
+
 def addTwoNumbers(l1, l2):
       """
       :type l1: ListNode
