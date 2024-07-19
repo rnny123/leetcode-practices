@@ -39,9 +39,32 @@ def easyremoveelement(nums,value):
     return len(nums)
 
 
-nums = [2,2,3]
+nums = [2,3,4,5]
 value = 2
 answer = easyremoveelement(nums,value)
 print(f"new nums is {nums}")
 print(f"answer is {answer}")
 
+def swap(i1,i2,array):
+    temp = array[i1]
+    array[i1] = array[i2]
+    array[i2] = temp
+    
+
+#so function removes 1st instance of value
+def easyremoveelement2(nums,value):
+	while (i < len(nums)):
+          if nums[i] == value:
+               while (i+1 < len(nums)):
+                    swap(i,i+1,nums)
+                    i += 1
+        i+= 1
+    nums.pop()
+    return len(nums)
+
+yeet = [2,3,4,5]
+[3,2,4,5]
+[3,4,2,5]
+[3,4,5,2]
+easyremoveelement2(yeet,2)
+print(f"new value of yeet = {yeet}")
