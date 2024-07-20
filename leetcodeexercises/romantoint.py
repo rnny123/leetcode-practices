@@ -27,6 +27,5 @@ def romanToInt(s):
         else:
             value += dict[s[i]]
     return value
-
 value=romanToInt("CM")
 print(f"value is {value}")
